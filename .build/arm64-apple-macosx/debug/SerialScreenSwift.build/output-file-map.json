@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/master.swiftdeps"
+  },
+  "/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/SerialScreenSwift.swift": {
+    "dependencies": "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.d",
+    "object": "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o",
+    "swiftmodule": "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift~partial.swiftmodule",
+    "swift-dependencies": "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swiftdeps",
+    "diagnostics": "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.dia"
+  }
+}

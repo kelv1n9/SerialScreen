@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SerialScreen-arm64-apple-macosx26.0-debug.exe": ["<SerialScreen-arm64-apple-macosx26.0-debug.exe>"]
+  "SerialScreenSwift-arm64-apple-macosx26.0-debug.module": ["<SerialScreenSwift-arm64-apple-macosx26.0-debug.module>"]
+  "main": ["<SerialScreen-arm64-apple-macosx26.0-debug.exe>","<SerialScreenSwift-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<SerialScreen-arm64-apple-macosx26.0-debug.exe>","<SerialScreenSwift-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen":
+    is-mutated: true
+commands:
+  "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen-entitlement.plist"]
+    description: "Write auxiliary file /Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen-entitlement.plist"
+
+  "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o"]
+    outputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen.product/Objects.LinkFileList"
+
+  "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/SerialScreenSwift.swift"]
+    outputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources"]
+    description: "Write auxiliary file /Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources"
+
+  "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<SerialScreen-arm64-apple-macosx26.0-debug.exe>":
+    tool: phony
+    inputs: ["<SerialScreen-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    outputs: ["<SerialScreen-arm64-apple-macosx26.0-debug.exe>"]
+
+  "<SerialScreenSwift-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules/SerialScreenSwift.swiftmodule"]
+    outputs: ["<SerialScreenSwift-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.SerialScreen-arm64-apple-macosx26.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen.product/Objects.LinkFileList"]
+    outputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/SerialScreen"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug","-o","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen","-module-name","SerialScreen","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_SerialScreenSwift_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules/SerialScreenSwift.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.SerialScreen-arm64-apple-macosx26.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen-entitlement.plist"]
+    outputs: ["<SerialScreen-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/SerialScreen"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen-entitlement.plist","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen"]
+
+  "C.SerialScreenSwift-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/SerialScreenSwift.swift","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources"]
+    outputs: ["/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules/SerialScreenSwift.swiftmodule"]
+    description: "Compiling Swift Module 'SerialScreenSwift' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","SerialScreenSwift","-emit-dependencies","-emit-module","-emit-module-path","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules/SerialScreenSwift.swiftmodule","-output-file-map","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/output-file-map.json","-incremental","-c","@/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources","-I","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","SerialScreenSwift_main","-parse-as-library","-swift-version","6","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","serialscreen"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/","/Users/elvin/Documents/My Projects/SerialScreen/Package.swift","/Users/elvin/Documents/My Projects/SerialScreen/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

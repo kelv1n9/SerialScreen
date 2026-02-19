@@ -1,0 +1,241 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.SerialScreenSwift-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources",
+      "importPath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/SerialScreenSwift.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "SerialScreenSwift",
+      "moduleOutputPath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules/SerialScreenSwift.swiftmodule",
+      "objects" : [
+        "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "SerialScreenSwift_main",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "serialscreen"
+      ],
+      "outputFileMapPath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules/SerialScreenSwift.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/SerialScreenSwift.swift"
+      ],
+      "tempsPath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "SerialScreenSwift" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "SerialScreenSwift",
+      "-package-name",
+      "serialscreen",
+      "-c",
+      "/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/SerialScreenSwift.swift",
+      "-I",
+      "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "SerialScreenSwift_main",
+      "-parse-as-library",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "serialscreen",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "SerialScreenSwift" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen-entitlement.plist"
+    },
+    "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/SerialScreenSwift.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreen.product/Objects.LinkFileList"
+    },
+    "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/elvin/Documents/My Projects/SerialScreen/Sources/SerialScreenSwift/SerialScreenSwift.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/SerialScreenSwift.build/sources"
+    },
+    "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/elvin/Documents/My Projects/SerialScreen/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}
