@@ -29,7 +29,6 @@ swift --version
 
 ## Quick Start
 ```bash
-cd "/Users/elvin/Documents/My Projects/SerialScreen"
 swift run SerialScreen
 ```
 
