@@ -2,16 +2,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "SerialScreenSwift",
+    name: "SerialScreen",
     platforms: [
         .macOS(.v13)
     ],
     products: [
-        .executable(name: "SerialScreen", targets: ["SerialScreenSwift"])
+        .executable(name: "SerialScreen", targets: ["SerialScreen"])
     ],
     targets: [
         .executableTarget(
-            name: "SerialScreenSwift"
+            name: "SerialScreen"
         )
     ]
 )
